@@ -10,12 +10,18 @@
 <body>
   <style>
       body {
-      background-color: aquamarine;
+      background-color: black;
     }
+    .card-text, h1, h5{
+      color: white;
+    }
+    img {
+  border: 5px solid white;
+} 
   </style>
   <div class="container">
-    <img width="500" height="400" src="<%= product.img %>">
-    <h1 class="mb-1"><%= product.name %></h1>
+    <img  width="500" height="400" src="<%= product.img %>">
+    <h1 class="mb-1"><u><%= product.name %></u></h1>
     <div class="card-text mb-2">Description: <%= product.description %></div>
     <div class="card-text mb-2">Price: $ <%= product.price %></div>
     <div class="card-text mb-2">Quantity: <%= product.qty %></div>
@@ -25,7 +31,10 @@
     <a href="/" class="btn btn-secondary">All Products</a>
     <a href="/products/edit/<%= product.id %>" class="btn btn-info">Edit</a>
   <div>
+    <div>
+    <h5></h5>
     <h5>Email:pgoldbeck1103@gmail.com</h5>
     <h5>Phone Number: (949)-572-9790</h5>
+  </div>
 </body>
 </html>
