@@ -1,17 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const Product = require("./models/product");
-const Comment = require("./models/comment");
+
 const commentRouter =require("./routes/comments");
 const productRouter = require("./routes/products");
 const methodOverride = require("method-override");
-const app = express();
 
-mongoose.connect("mongodb://localhost/blog", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+const app = express();
+require('dotenv').config()
+require("./models/index")
+const PORT = process.env.PORT
+
+const Product = require("./models/product");
+const Comment = require("./models/comment");
+
+
+
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
@@ -66,4 +69,6 @@ app.get('/seed', async (req, res) => {
 app.use("/products", productRouter);
 app.use("/comments", commentRouter)
 
-app.listen(3000);
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`)
+});
