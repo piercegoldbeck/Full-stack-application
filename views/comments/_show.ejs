@@ -1,0 +1,12 @@
+
+  <div class="container">
+    <% comments.forEach(comment => { %>
+      <div class="d-flex comment">
+        <div class="card-text mb-2"><%= comment.name %>: <%= comment.message %></div> 
+        <form class="pl-2" action="/comments/<%= comment.id %>?_method=DELETE" method="POST">
+          <button type="submit" class="btn btn-danger py-0">Delete Comment</button>
+          <a href="comments/edit/<%= comment.id %>" class="btn btn-info py-0">Edit Comment</a>
+        </form>
+      </div>
+    <% }) %>
+  <div>

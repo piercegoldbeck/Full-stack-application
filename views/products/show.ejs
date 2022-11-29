@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Products</title>
+</head>
+<body>
+  <style>
+      body {
+      background-color: aquamarine;
+    }
+  </style>
+  <div class="container">
+    <img width="500" height="400" src="<%= product.img %>">
+    <h1 class="mb-1"><%= product.name %></h1>
+    <div class="card-text mb-2">Description: <%= product.description %></div>
+    <div class="card-text mb-2">Price: $ <%= product.price %></div>
+    <div class="card-text mb-2">Quantity: <%= product.qty %></div>
+    <div class="text-muted mb-2">
+      <%= product.createdAt.toLocaleDateString() %>
+    </div>
+    <a href="/" class="btn btn-secondary">All Products</a>
+    <a href="/products/edit/<%= product.id %>" class="btn btn-info">Edit</a>
+  <div>
+    <h5>Email:pgoldbeck1103@gmail.com</h5>
+    <h5>Phone Number: (949)-572-9790</h5>
+</body>
+</html>

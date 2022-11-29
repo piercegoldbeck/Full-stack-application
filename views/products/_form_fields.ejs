@@ -1,0 +1,23 @@
+<div class="form-group">
+  <label for="title">Name</label>
+  <input required value="<%= product.name %>" type="text" name="name" id="name" class="form-control">
+</div>
+<div class="form-group">
+  <label for="description">Description</label>
+  <textarea name="description" id="description" class="form-control"><%= product.description %></textarea>
+</div>
+<div class="form-group">
+  <label for="img">Image Link</label>
+  <input required name="img" id="img" value="<%= product.img %>" class="form-control"/>
+</div>
+<div class="form-group">
+  <label for="price">Price</label>
+  <input required name="price" value="<%= product.price %>" id="price" class="form-control"/>
+</div>
+<div class="form-group">
+  <label for="qty">Quantity</label>
+  <input required name="qty" value="<%= product.qty %>" id="qty" class="form-control"/>
+</div>
+
+<a href="/" class="btn btn-secondary">Cancel</a>
+<button type="submit" class="btn btn-primary">Save</button>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Products</title>
+</head>
+<body>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+    h1, h6 {
+      text-align: center;
+    }
+    .card-body {
+      background-color: antiquewhite;
+    }
+  </style>
+  <div class="container">
+    <h1 class="mb-4"><u>THE PRODUCT GALLERY</u></h1>
+    <a href="/products/new" class="btn btn-success">Upload new products</a>
+    <% products.forEach(product => { %>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h4 class="card-title"><%= product.name %></h4>
+          <img width="500" height="400" src="<%= product.img %>">
+          <div class="card-text mb-2">Description: <%= product.description %></div>
+          <div class="card-text mb-2">Price: $<%= product.price %></div>
+          <div class="card-text mb-2">Quantity: <%= product.qty %></div>
+          <div class="card-subtitle text-muted mb-2"> <%= product.createdAt.toLocaleDateString() %> </div>
+          <a href="products/<%= product.slug %>" class="btn btn-primary">View Product</a>
+          <a href="products/edit/<%= product.id %>" class="btn btn-info">Edit</a>
+          <form action="/products/<%= product.id %>?_method=DELETE" method="POST" class="d-inline">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    <% }) %>
+  
+    <h2>Comment Section: </h2>
+    
+    <div>
+      <%- include('../comments/_show') %>
+    </div>
+    <form action="/comments" method="POST"> <%- include('../comments/_form_fields') %></form>
+  </div>
+  <h6>Contact here if you are interested in buying these images:</h6>
+  <h6>Email:pgoldbeck1103@gmail.com</h6>
+  <h6>Phone Number: (949)-572-9790</h6>
+</body>
+</html>
