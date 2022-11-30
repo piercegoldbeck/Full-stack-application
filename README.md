@@ -10,7 +10,9 @@ Instructor notes/ Mongoose Store Homework
 Youtube Tutorial on how to create a full-stack-app
 https://www.youtube.com/watch?v=1NrHkjlWVhM
 
-Installation Instructions- not applicable to this project.
+Installation Instructions- none needed for this project. The project can be accessed at this link.
+
+https://full-stack-application-production.up.railway.app/
 
 User Stories
 
