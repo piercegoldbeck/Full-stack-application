@@ -27,7 +27,9 @@ Wireframe/Approach
 ![IMG_8948](https://user-images.githubusercontent.com/115511495/204760957-1cff2211-797f-481d-99c7-50568f080225.jpeg)
 
 The project itself was created using a models, views, and controllers concept. The server.js file acts as the middle man between the views in which the user interacts with on the website and the backend which is directly talking to the database. 
+
 EX:
+
 ![image](https://user-images.githubusercontent.com/115511495/204766997-a0d17ad7-e3bc-4779-ba62-da2cf462bed8.png)
 
 
