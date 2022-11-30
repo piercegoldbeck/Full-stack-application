@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-const commentRouter =require("./routes/comments");
+const commentRouter = require("./routes/comments");
 const productRouter = require("./routes/products");
 const methodOverride = require("method-override");
 
