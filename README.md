@@ -7,6 +7,7 @@ Html, CSS, Bootstrap, Javascript, Node.js, Mongoose, Slugify, Express, and EJS
 
 References:
 Instructor notes/ Mongoose Store Homework
+
 Youtube Tutorial on how to create a full-stack-app
 https://www.youtube.com/watch?v=1NrHkjlWVhM
 
