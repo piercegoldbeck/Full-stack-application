@@ -20,6 +20,8 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 
+//this route gets all the comments and products from the database and passes them to the index page 
+
 app.get("/", async (req, res) => {
   const products = await Product.find().sort({ createdAt: "desc" });
   const comments = await Comment.find().sort({ createdAt: "asc" });

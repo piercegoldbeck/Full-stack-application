@@ -39,8 +39,8 @@ function saveCommentAndRedirect() {
       try {
         comment = await comment.save();
         res.redirect('/');
-      } catch (e) {
-        console.log("error", e);
+      } catch (error) {
+        console.log("error", error);
         res.redirect('/');
       }
     };

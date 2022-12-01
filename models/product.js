@@ -32,6 +32,8 @@ const productSchema = new mongoose.Schema({
   },
 });
 
+//this function will run before validation for the model and create a slug 
+
 productSchema.pre("validate", function (next) {
   if (this.name) {
     this.slug = slugify(this.name, { lower: true, strict: true });
